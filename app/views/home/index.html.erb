@@ -1,0 +1,11 @@
+<% if current_user %>
+<h3>Hello <%= current_user.fullname %></h3>
+<h3>Hinh anh</h3>
+<%= image_tag current_user.image %>
+<br>
+<h3>Role</h3>: 
+<%= current_user.roles.pluck(:name) %>
+<% else %>
+<h3>You need to login to be welcomed !</h3>
+<% end %>
+<br>

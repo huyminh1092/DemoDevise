@@ -1,0 +1,205 @@
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }.header-menu-all {
+    height: auto;
+    width: 100%;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .header-top-bar {
+    height: 40px;
+    background-color: #222;
+  }
+  
+  .header-left-top-bar {
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #b2b2b2;
+  }
+  
+  .header-right-top-bar a {
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    line-height: 1.8;
+    height: 100%;
+    color: #b2b2b2;
+    border-right: 1px solid rgba(255,255,255,0.3);
+  }
+  
+  .header-right-top-bar a:first-child {
+    border-left: 1px solid rgba(255,255,255,0.3);
+  }
+  
+  .header-right-top-bar a:hover {
+    color: #6c7ae0;
+  }
+  
+  .header-wrap-menu-desktop {
+    z-index: 1100;
+    background-color: #fff;
+    width: 100%;
+    height: 84px;
+    top: 40px;
+    left: 0px; 
+    transition: height 0.3s, background-color 0.3s;
+  }
+  
+  .header-limiter-menu-desktop {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    height: 65%;
+    margin-right: 55px;
+  }
+  
+  .header-logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .header-menu-desktop {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .header-main-menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-main-menu > li {
+    display: block;
+    position: relative;
+    padding: 20px 10px 20px 0px;
+    margin: 0px 4px 0px 14px;
+  }
+  
+  .header-main-menu > li > a {
+    font-family: Poppins-Medium;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0px;
+    transition: all 0.4s;
+  }
+  
+  .header-sub-menu {
+    list-style-type: none;
+    position: absolute;
+    top:0;
+    left:100%;
+    min-width: 178px;
+    max-width: 225px;
+    background-color: #fff;
+    padding: 5px 0;
+    box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+    visibility: hidden;
+    opacity: 0; 
+  }
+  
+  .header-sub-menu li {
+    position: relative;
+    background-color: transparent;
+    transition: all 0.4s;
+  }
+  
+  .header-main-menu > li > .header-sub-menu {
+    top:100%;
+    left: 0;
+  }
+  
+  .header-sub-menu a {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    display: block;
+    padding: 8px 20px; 
+    width: 100%;
+    transition: all 0.4s;
+  }
+  
+  .header-main-menu > li:hover > a {
+    text-decoration: none;
+    color: #6c7ae0;
+  }
+  
+  .header-main-menu > li:hover > .header-sub-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .header-sub-menu li:hover > .header-sub-menu {
+    visibility: visible;
+    opacity: 1;
+  } 
+  
+  .header-sub-menu li:hover {
+    background-color: transparent;
+  }
+  
+  .header-sub-menu > li:hover > a {
+    color: #6c7ae0;
+    text-decoration: none;
+  }
+  
